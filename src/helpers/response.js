@@ -1,23 +1,25 @@
+import constants from "./constants";
+
 export const handleError = (res,
   message = "Something went wrong",
-  status = 503,
+  status,
   data) => {
   const errorObject = {
     status,
     message,
     data
   };
-  return res.status(status).send(errorObject);
+  res.status(400).json(errorObject).end();
 };
 
 export const handleSuccess = (res,
   message = "success",
-  status = 200,
+  status,
   data = {}) => {
   const errorObject = {
     message,
     status,
     data
   };
-  return res.status(status).send(errorObject);
+  return res.status(200).json(errorObject).end();
 };

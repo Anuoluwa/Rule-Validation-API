@@ -1,6 +1,6 @@
 const constants = {
-  OK: 200,
-  BAD_REQUEST: 400
+  OK: "success",
+  BAD_REQUEST: "error"
 };
 
 export default constants;
