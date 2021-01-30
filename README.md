@@ -7,19 +7,20 @@
 
 NodeJS Backend Engineer (FullTime)
 
-Dillinger uses a number of open source projects to work properly:
 
 * [Node] - HTML enhanced for web apps!
 * [Express] - awesome web-based text editor
 
 
-The task:
-Create a simple rule-validation API. 
+### The task:
+#### Create a simple rule-validation API. 
 (You are welcome to use ANY framework or third party library of your choice)
 
 The response structure for your API should be fashioned after the popular JSEND pattern. 
 
 Example:
+
+```sh
 {
   "message": "API response message",
   "status": "success",
@@ -27,6 +28,7 @@ Example:
     isValidForRule: true,
   }
 }
+```
 
 "message" - Apt response message for your API. (Unless otherwise stated, this message can be anything you decide)
 "status" - Status for your API response. The two possible values for this prop are "success" and "error" (PS: This isn't the response HTTP status code)
@@ -37,6 +39,7 @@ Your rule-validation API should have just two routes.
 1/ First route is the base route. HTTP GET "/"
 It should return with data in the following format:
 
+```sh
 {
   "message": "My Rule-Validation API"
   "status": "success",
@@ -48,6 +51,7 @@ It should return with data in the following format:
     "twitter": "@amosb"
   }
 }
+```
 
 Please note:
 a/ name should be your full name
@@ -58,6 +62,8 @@ e/ twitter should be your twitter handle (the '@' symbol must be included). [PS:
 
 2/ Second route is the rule validation route. HTTP POST "/validate-rule"
 The route should accept JSON data containing a rule and data field to validate the rule against. Example:
+
+```sh
 {
   "rule": {
     "field": "missions"
@@ -72,6 +78,7 @@ The route should accept JSON data containing a rule and data field to validate t
     "missions": 45
   }
 }
+```
 
 Endpoint requirements/constraints:
 a/ The rule and data fields are required.
