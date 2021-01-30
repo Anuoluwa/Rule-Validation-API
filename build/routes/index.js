@@ -11,6 +11,14 @@ var _express = _interopRequireDefault(require("express"));
 
 var _authorData = _interopRequireDefault(require("../data/authorData"));
 
+var _validationController = _interopRequireDefault(require("../controllers/validationController"));
+
+var _jsonValidation = _interopRequireDefault(require("../validations/jsonValidation"));
+
+var _validationCondition = _interopRequireDefault(require("../middlewares/validationCondition"));
+
+var _dataValidation = _interopRequireDefault(require("../validations/dataValidation"));
+
 var indexRouter = _express["default"].Router();
 
 indexRouter.get("/", function (req, res) {
@@ -22,5 +30,6 @@ indexRouter.get("/", function (req, res) {
     })
   );
 });
+indexRouter.post("/validate-rule", [_jsonValidation["default"], _dataValidation["default"], _validationCondition["default"]], _validationController["default"].validateRule);
 var _default = indexRouter;
 exports["default"] = _default;

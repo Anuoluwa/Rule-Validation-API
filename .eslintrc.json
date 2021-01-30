@@ -21,7 +21,7 @@
     "semi": ["error", "always"],
     "no-console": 1,
     "comma-dangle": [0],
-    "arrow-parens": [0],
+    "arrow-parens": [1],
     "object-curly-spacing": ["warn", "always"],
     "array-bracket-spacing": ["warn", "always"],
     "import/prefer-default-export": [0],
